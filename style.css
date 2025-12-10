@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    color: #222;
+}
+
+/* -------------------- NAVBAR MODERNE (COMMUN) -------------------- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background: #1e3a8a;
+}
+
+/* Logo */
+.nav-logo img {
+    width: 55px;
+    height: auto;
+}
+
+/* MENU CENTRÉ */
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* BOUTON ADHERER (dans la navbar) */
+.nav-action {
+    display: flex;
+    align-items: center;
+}
+
+.adherer-btn {
+    padding: 12px 22px;
+    background: linear-gradient(90deg, #f97316, #ea580c);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    transition: 0.25s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.adherer-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.25);
+}
+
+/* ---- RESPONSIVE NAVBAR ---- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-action {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* -------------------- PAGE INDEX SPÉCIFIQUE -------------------- */
+
+/* SECTION OPTIC */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 50vh; /* Pour centrer verticalement */
+}
+
+.right {
+    position: relative;
+    width: 100%;
+    min-height: 600px; /* hauteur du bloc */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centre verticalement */
+    align-items: center;     /* centre horizontalement */
+    text-align: center;
+    background-image: url('IMAGE/image-projet.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.right h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    color: white; /* si l'image est sombre */
+    margin-bottom: 20px; /* espace entre le texte et le bouton */
+    z-index: 1;
+}
+
+.right .btn {
+    padding: 15px 30px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1;
+    text-decoration: none;
+}
+
+
+
+.right .btn:hover {
+    background: #143075;
+}
+
+/* ---- RESPONSIVE PAGE INDEX ---- */
+@media (max-width: 768px) {
+    .right h1 {
+        font-size: 1.8rem; /* 28.8px */
+    }
+}
+
+
+/* -------------------- FOOTER (COMMUN) -------------------- */
+footer {
+    background: #1e3a8a;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+footer h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.T1 { /* Conteneur principal du pied de page */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.T2 { /* Colonne du pied de page */
+    flex: 1;
+    min-width: 220px;
+    padding: 10px;
+}
+
+.T2 h3, .T2 h4, .T2 h5 {
+    margin-bottom: 15px;
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.T2 p {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.T2 a { /* Liens dans les pages */
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+
+.T2 a:hover {
+    color: #f97316;
+}
+
+.T2 img {
+    margin-bottom: 10px;
+    border-radius: 6px;
+    vertical-align: middle;
+}
+
+.T2 hr {
+    border: 0;
+    border-top: 1px solid #334155;
+    margin: 15px 0;
+}
+
+/* ---- RESPONSIVE FOOTER ---- */
+@media (max-width: 768px) {
+    .T1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .T2 {
+        min-width: 100%;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 20px;
+    }
+    .T2:last-child {
+        border-bottom: none;
+    }
+    .T2 img {
+        display: block;
+        margin: 10px auto;
+    }
+}
